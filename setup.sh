@@ -1,9 +1,7 @@
-mkdir -p ~/.streamlit/
+#!/bin/bash
 
-echo "\
-[server]\n\
-headless = true\n\
-port = $PORT\n\
-enableCORS = false\n\
-\n\
-" > ~/.streamlit/config.toml
+# Install dependencies from requirements.txt
+pip install -r requirements.txt
+
+# Run the Streamlit app
+streamlit run app.py
